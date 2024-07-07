@@ -1,0 +1,6 @@
+After creating folder `npm init`
+npm i express ejs
+npm i --save-dev nodemon dotenv
+createing .env file and .gitignore 
+and add folder name in .gitignore file which we don't wan't to move
+`npm run devstart`
