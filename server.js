@@ -1,17 +1,16 @@
-const express = require("express")
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-app.get('/', (req, res)=>{
-    res.send('hello');
-    return "hi backend!!"
-})
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-// app.get('/singin', (req,res)=>{
-//     res.render("signin.ejs")
-// })
+app.get('/api', (req, res) => {
+    res.send('Hello from Node.js');
+});
 
-// app.get('/register', (req, res)=>{
-//     res.render('register.ejs')
-// })
-
-app.listen(3000);
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
